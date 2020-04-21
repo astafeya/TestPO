@@ -173,7 +173,9 @@ public class MatrixTest {
         double[][] actual = Matrix.multiplyByNumber(matrix1, number);
 
         for (int i = 0; i < expected.length; i++) {
-
+            Assert.assertArrayEquals(expected[i],
+                    actual[i],
+                    1E-15);
         }
     }
 
